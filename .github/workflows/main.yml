@@ -1,4 +1,4 @@
-name: Call BPMN-validate workflow.
+name: Call BPMN-validate workflow
 
 on:
   push:
@@ -12,6 +12,6 @@ jobs:
       pull-requests: write
     uses: KristofferHogberg/validate-bpmn-action/.github/workflows/validate-bpmn.yml@main
     with:
-      bpmn-folder: 'BPMN/'
+      bpmn-file: 'invalid-model.bpmn'
       custom-rules-folder: 'custom_rules/'
       bpmnlintrc-path: '.bpmnlintrc'
