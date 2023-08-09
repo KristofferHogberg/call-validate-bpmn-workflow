@@ -12,6 +12,6 @@ jobs:
       pull-requests: write
     uses: KristofferHogberg/validate-bpmn-action/.github/workflows/validate-bpmn.yml@main
     with:
-      bpmn-file: 'invalid-model.bpmn'
+      bpmn-file: invalid-model.bpmn
       custom-rules-folder: 'custom_rules/'
       bpmnlintrc-path: '.bpmnlintrc'
