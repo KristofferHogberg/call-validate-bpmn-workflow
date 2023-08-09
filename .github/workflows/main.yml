@@ -1,4 +1,4 @@
-name: Call BPMN-validate workflow
+name: Call BPMN-validate workflow.
 
 on:
   push:
