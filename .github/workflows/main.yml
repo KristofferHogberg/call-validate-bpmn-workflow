@@ -1,18 +1,17 @@
-name: Another Workflow
+name: Call a reusable workflow
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 jobs:
-  run_bpmnlint_validation:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Trigger BPMNLint Validation
-        uses: KristofferHogberg/call-validate-bpmn-workflow/.github/workflows/validate-bpmn.ymll@main
-        with:
-          bpmn-folder: 'BPMN/'
-          custom-rules-folder: 'custom_rules/'
-          bpmnlintrc-path: '.bpmnlintrc'
+  call-workflow-passing-data:
+    permissions:
+      contents: read
+      pull-requests: write
+    uses: KristofferHogberg/call-validate-bpmn-workflow/.github/workflows/validate-bpmn.ymll@main
+    with:
+      bpmn-folder: 'BPMN/'
+      custom-rules-folder: 'custom_rules/'
+      bpmnlintrc-path: '.bpmnlintrc'
