@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Trigger BPMNLint Validation
-        uses: ./.github/workflows/bpmnlint-validation.yml
+        uses: KristofferHogberg/validate-bpmn-action/actions/workflows/validate-bpmn.yml@validate-bpmn
         with:
           bpmn-folder: 'BPMN/'
           custom-rules-folder: 'custom_rules/'
