@@ -10,7 +10,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
-    uses: KristofferHogberg/call-validate-bpmn-workflow/.github/workflows/validate-bpmn.ymll@main
+    uses: KristofferHogberg/call-validate-bpmn-workflow/.github/workflows/validate-bpmn.yml@main
     with:
       bpmn-folder: 'BPMN/'
       custom-rules-folder: 'custom_rules/'
