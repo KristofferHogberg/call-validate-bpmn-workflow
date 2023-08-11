@@ -6,10 +6,9 @@ on:
       - main
 
 jobs:
-  call-workflow-passing-data:
+  call-bpmn-validate-workflow:
     permissions:
       contents: read
-      pull-requests: write
     uses: KristofferHogberg/validate-bpmn-action/.github/workflows/validate-bpmn.yml@main
     with:
       bpmn-file-path: 'BPMN/demo-process.bpmn'
