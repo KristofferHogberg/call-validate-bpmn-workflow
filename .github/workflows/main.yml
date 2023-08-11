@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  call-bpmn-validate-workflow:
+  call-BPMN-validate-workflow:
     permissions:
       contents: read
     uses: KristofferHogberg/validate-bpmn-action/.github/workflows/validate-bpmn.yml@main
