@@ -13,6 +13,7 @@ To use this workflow, follow these steps:
 2. **Add the Workflow Configuration**
 
    Open the `bpmn-validation.yml` file and paste the following code:
+   Exchange the placeholder paths to suit your needs.
 
    ```yaml
    name: Call BPMN-validate workflow
