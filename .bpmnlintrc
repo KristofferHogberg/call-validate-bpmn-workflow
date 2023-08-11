@@ -1,7 +1,3 @@
 {
-    "extends": "bpmnlint:recommended",
-    "rules": {
-        "force-digit-id": "error",
-        "force-service-task-type": "error"
-    }
+    "extends": "bpmnlint:recommended"
 }
