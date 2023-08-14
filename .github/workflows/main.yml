@@ -9,7 +9,7 @@ jobs:
   call-BPMN-validate-workflow:
     permissions:
       contents: read
-    uses: KristofferHogberg/validate-bpmn-action/.github/workflows/validate-bpmn.yml@main
+    uses: apendo-c8/validate-bpmn-model/.github/workflows/validate-bpmn-model.yml@main
     with:
       bpmn-file-path: 'BPMN/demo-process.bpmn'
       custom-rules-folder: 'custom_rules/'
