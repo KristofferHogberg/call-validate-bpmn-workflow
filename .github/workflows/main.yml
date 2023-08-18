@@ -1,4 +1,4 @@
-name: Call BPMN-validate workflow
+name: Main Workflow
 
 on:
   push:
@@ -6,11 +6,16 @@ on:
       - main
 
 jobs:
-  call-BPMN-validate-workflow:
-    permissions:
-      contents: read
-    uses: KristofferHogberg/validate-bpmn-action/.github/workflows/validate-bpmn.yml@main
-    with:
-      bpmn-files-path: 'BPMN/demo-process.bpmn'
-      custom-rules-folder: 'custom_rules'
-      bpmnlintrc-path: 'BPMN/.bpmnlintrc'
+  call_bpmn_validate_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Call BPMN Validate Workflow
+        uses: KristofferHogberg/validate-bpmn-action/.github/workflows/validate-bpmn.yml@main
+        with:
+          bpmn-files-path: 'BPMN'  # Adjust paths accordingly
+          custom-rules-folder: 'custom_rules'
+          bpmnlintrc-path: 'BPMN/.bpmnlintrc'
