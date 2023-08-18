@@ -12,5 +12,5 @@ jobs:
     uses: KristofferHogberg/validate-bpmn-action/.github/workflows/validate-bpmn.yml@main
     with:
       bpmn-file-path: 'BPMN/demo-process.bpmn'
-      custom-rules-folder: 'custom_rules/'
+      custom-rules-folder: 'custom_rules'
       bpmnlintrc-path: 'BPMN/.bpmnlintrc'
