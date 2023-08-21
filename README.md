@@ -13,23 +13,34 @@ To use this workflow, follow these steps:
 2. **Add the Workflow Configuration**
 
    Open the `bpmn-validation.yml` file and paste the following code:
-   Exchange the placeholder paths to suit your needs.
 
    ```yaml
-   name: Call BPMN-validate workflow
+   name: Use Camunda BPMN-validate workflow action
 
    on:
-     push:
-       branches:
-         - main
-
+      workflow_dispatch:
+   
    jobs:
-     call-workflow-passing-data:
-       permissions:
-         contents: read
-         pull-requests: write
-       uses: KristofferHogberg/validate-bpmn-action/.github/workflows/validate-bpmn.yml@main
-       with:
-         bpmn-file-path: 'BPMN/demo-process.bpmn'
-         custom-rules-folder: 'custom_rules/'
-         bpmnlintrc-path: 'BPMN/.bpmnlintrc'
+   call_bpmn_validate_workflow:
+   runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up NodeJs (this action is only compatible with nodejs 16.20.1 at this moment)
+      - name: Set up NodeJs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.20.1
+
+      # Install bpmnlint
+      - name: Install bpmnlint
+        run: npm install -g bpmnlint
+
+      - name: Validate BPMN process models
+        uses: KristofferHogberg/validate-bpmn-action@v.1.0.0
+        with:
+          bpmn-files-path: 'BPMN'  # Adjust paths accordingly
+          custom-rules-folder: 'custom_rules'
+          bpmnlintrc-path: 'BPMN/.bpmnlintrc'
