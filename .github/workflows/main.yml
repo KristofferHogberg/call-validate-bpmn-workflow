@@ -15,14 +15,14 @@ jobs:
       - name: Set up NodeJs
         uses: actions/setup-node@v3
         with:
-          node-version: 16.20.1
+          node-version: 18.17.0
 
       # Install bpmnlint
       - name: Install bpmnlint
         run: npm install -g bpmnlint
 
       - name: Validate BPMN process models
-        uses: KristofferHogberg/validate-bpmn-action@v.2.0.0
+        uses: KristofferHogberg/validate-bpmn-action@v.2.0.2
         with:
           bpmn-files-path: 'BPMN'  # Adjust paths accordingly
           custom-rules-folder: 'custom_rules'
