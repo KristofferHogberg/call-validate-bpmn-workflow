@@ -22,7 +22,7 @@ jobs:
         run: npm install -g bpmnlint
 
       - name: Validate BPMN process models
-        uses: KristofferHogberg/validate-bpmn-action@v.2.0.2
+        uses: KristofferHogberg/validate-bpmn-action@v2.0.2
         with:
           bpmn-files-path: 'BPMN'  # Adjust paths accordingly
           custom-rules-folder: 'custom_rules'
