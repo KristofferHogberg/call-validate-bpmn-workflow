@@ -1,10 +1,8 @@
 name: Main Workflow test
 
 on:
-  push:
-    branches:
-      - main
-
+  workflow_dispatch:
+  
 jobs:
   call_bpmn_validate_workflow:
     runs-on: ubuntu-latest
@@ -29,3 +27,4 @@ jobs:
           bpmn-files-path: 'BPMN'  # Adjust paths accordingly
           custom-rules-folder: 'custom_rules'
           bpmnlintrc-path: 'BPMN/.bpmnlintrc'
+          node-version: '16.20.1' # node-version must be the same as in "Set up NodeJs"
