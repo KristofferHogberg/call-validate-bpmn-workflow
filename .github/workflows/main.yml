@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       # Set up NodeJs
       - name: Set up NodeJs
@@ -22,7 +22,7 @@ jobs:
         run: npm install -g bpmnlint
 
       - name: Validate BPMN process models
-        uses: KristofferHogberg/validate-bpmn-action@v.1.0.0
+        uses: KristofferHogberg/validate-bpmn-action@2.0.0
         with:
           bpmn-files-path: 'BPMN'  # Adjust paths accordingly
           custom-rules-folder: 'custom_rules'
