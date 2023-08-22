@@ -27,4 +27,4 @@ jobs:
           bpmn-files-path: 'BPMN'  # Adjust paths accordingly
           custom-rules-folder: 'custom_rules'
           bpmnlintrc-path: 'BPMN/.bpmnlintrc'
-          node-version: '16.20.1' # node-version must be the same as in "Set up NodeJs"
+          node-version: '18.17.0' # node-version must be the same as in "Set up NodeJs"
