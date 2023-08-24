@@ -14,5 +14,5 @@ jobs:
          - name: Validate BPMN process models
            uses: apendo-c8/validate-bpmn-models@v1
            with:
-              bpmn-files-path: '<path-to-process-models-folder>'
-              custom-rules-folder: '<path-to-custom-rules-folder>'
+              bpmn-files-path: 'BPMN'
+              custom-rules-folder: 'custom_rule'
