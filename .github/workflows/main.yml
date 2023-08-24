@@ -11,7 +11,7 @@ jobs:
          - name: Checkout repository
            uses: actions/checkout@v3
 
-         - name: Validate BPMN process models
+         - name: Linting BPMN models
            uses: apendo-c8/validate-bpmn-models@v1
            with:
               bpmn-files-path: 'BPMN'
