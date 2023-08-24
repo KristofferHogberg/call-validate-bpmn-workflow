@@ -15,4 +15,4 @@ jobs:
            uses: apendo-c8/validate-bpmn-models@v1
            with:
               bpmn-files-path: 'BPMN'
-              custom-rules-folder: 'custom_rule'
+              custom-rules-folder: 'custom_rules'
