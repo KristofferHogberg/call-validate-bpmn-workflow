@@ -9,22 +9,10 @@ jobs:
 
       steps:
          - name: Checkout repository
-           uses: actions/checkout@main
-
-         # Set up NodeJs
-         - name: Set up NodeJs
-           uses: actions/setup-node@v3
-           with:
-              node-version: 18.17.0
-
-         # Install bpmnlint
-         - name: Install bpmnlint
-           run: npm install -g bpmnlint
+           uses: actions/checkout@v3
 
          - name: Validate BPMN process models
-           uses: KristofferHogberg/validate-bpmn-action@main
+           uses: apendo-c8/validate-bpmn-models-action@v1
            with:
-              bpmn-files-path: 'BPMN' 
+              bpmn-files-path: 'BPMN'
               custom-rules-folder: 'custom_rules'
-              bpmnlintrc-path: 'BPMN/.bpmnlintrc'
-              node-version: '18.17.0'
