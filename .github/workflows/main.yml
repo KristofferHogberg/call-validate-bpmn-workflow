@@ -1,4 +1,4 @@
-name: Linting BPMN models with custom rule-set
+name: Linting BPMN models with standard rule-set
 
 on:
    workflow_dispatch:
@@ -15,4 +15,4 @@ jobs:
            uses: apendo-c8/validate-bpmn-models@v1
            with:
               bpmn-files-path: 'BPMN'
-              custom-rules-folder: 'custom_rules'
+     
