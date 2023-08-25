@@ -1,4 +1,4 @@
-name: Linting BPMN models with custom rule-set - Demo
+name: Linting BPMN models with custom rule-set
 
 on:
    workflow_dispatch:
