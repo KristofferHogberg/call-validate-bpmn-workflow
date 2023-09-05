@@ -1,19 +1,18 @@
 name: Linting BPMN models with custom rule-set
 
 on:
-   workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-   call_bpmn_validate_workflow:
-      runs-on: ubuntu-latest
+  call_bpmn_validate_workflow:
+    runs-on: ubuntu-latest
 
-      steps:
-         - name: Checkout repository
-           uses: actions/checkout@v3
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-         - name: Linting BPMN models
-           uses: apendo-c8/validate-bpmn-models@v1
-           with:
-              bpmn-files-path: 'BPMN'
-              custom-rules-folder: 'custom_rules'
-     
+      - name: Linting BPMN models
+        uses: apendo-c8/validate-bpmn-models@v1
+        with:
+          bpmn-files-path: 'BPMN'
+          custom-rules-folder: 'custom_rules'
